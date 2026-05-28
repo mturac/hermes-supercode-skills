@@ -1,1 +1,0 @@
-[md] | "Deploy my e-commerce app to production, make sure it's secure, and set up
