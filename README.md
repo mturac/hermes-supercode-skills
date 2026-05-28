@@ -47,6 +47,47 @@ done
 ls ~/.claude/skills/
 ```
 
+### Demo
+
+```
+$ npx hermes-skills install
+⚡ Hermes SuperCode Skills v1.0.0
+
+Installing 13 skills to ~/.claude/skills/ ...
+
+  ✅  api-sculptor      API design specialist (REST/GraphQL/gRPC)
+  ✅  auth-architect    Auth & identity systems (OAuth2/JWT/SSO)
+  ✅  db-whisperer      Database optimization & migrations
+  ✅  deploy-ninja      Zero-downtime deployments & rollback
+  ✅  ghost-scraper     Ethical web scraping
+  ✅  infra-automation  DNS, SSL, Cloudflare, CDN
+  ✅  mcp-conductor     Multi-agent orchestration
+  ✅  obs-guardian      OpenTelemetry, Prometheus, SLOs
+  ✅  pipeline-architect ETL/ELT pipelines & streaming
+  ✅  prediction-alpha  Prediction market analysis
+  ✅  prompt-forge      LLM prompt engineering
+  ✅  quantum-debugger  Race conditions & memory leaks
+  ✅  security-sentinel Security audits & vuln scanning
+
+13/13 installed in 0.8s
+```
+
+```
+$ npx hermes-skills add db-whisperer --local
+✅ db-whisperer installed to ./.claude/skills/db-whisperer/
+```
+
+```
+$ npx hermes-skills list
+Skill              Status     Target
+─────────────────────────────────────
+api-sculptor       ✅ active  global
+auth-architect     ✅ active  global
+db-whisperer       ✅ active  local
+deploy-ninja       ✅ active  global
+...
+```
+
 ### Design Principles
 
 1. **Recon → Plan → Execute → Verify** — no skill jumps straight to action
@@ -93,6 +134,47 @@ cd hermes-supercode-skills
 for skill in skills/*/; do
   ln -sf "$(pwd)/$skill" ~/.claude/skills/$(basename "$skill")
 done
+```
+
+### 演示
+
+```
+$ npx hermes-skills install
+⚡ Hermes SuperCode Skills v1.0.0
+
+Installing 13 skills to ~/.claude/skills/ ...
+
+  ✅  api-sculptor      API design specialist (REST/GraphQL/gRPC)
+  ✅  auth-architect    Auth & identity systems (OAuth2/JWT/SSO)
+  ✅  db-whisperer      Database optimization & migrations
+  ✅  deploy-ninja      Zero-downtime deployments & rollback
+  ✅  ghost-scraper     Ethical web scraping
+  ✅  infra-automation  DNS, SSL, Cloudflare, CDN
+  ✅  mcp-conductor     Multi-agent orchestration
+  ✅  obs-guardian      OpenTelemetry, Prometheus, SLOs
+  ✅  pipeline-architect ETL/ELT pipelines & streaming
+  ✅  prediction-alpha  Prediction market analysis
+  ✅  prompt-forge      LLM prompt engineering
+  ✅  quantum-debugger  Race conditions & memory leaks
+  ✅  security-sentinel Security audits & vuln scanning
+
+13/13 installed in 0.8s
+```
+
+```
+$ npx hermes-skills add db-whisperer --local
+✅ db-whisperer installed to ./.claude/skills/db-whisperer/
+```
+
+```
+$ npx hermes-skills list
+Skill              Status     Target
+─────────────────────────────────────
+api-sculptor       ✅ active  global
+auth-architect     ✅ active  global
+db-whisperer       ✅ active  local
+deploy-ninja       ✅ active  global
+...
 ```
 
 ### 设计原则
@@ -144,6 +226,47 @@ done
 
 # Doğrula
 ls ~/.claude/skills/
+```
+
+### Demo
+
+```
+$ npx hermes-skills install
+⚡ Hermes SuperCode Skills v1.0.0
+
+Installing 13 skills to ~/.claude/skills/ ...
+
+  ✅  api-sculptor      API design specialist (REST/GraphQL/gRPC)
+  ✅  auth-architect    Auth & identity systems (OAuth2/JWT/SSO)
+  ✅  db-whisperer      Database optimization & migrations
+  ✅  deploy-ninja      Zero-downtime deployments & rollback
+  ✅  ghost-scraper     Ethical web scraping
+  ✅  infra-automation  DNS, SSL, Cloudflare, CDN
+  ✅  mcp-conductor     Multi-agent orchestration
+  ✅  obs-guardian      OpenTelemetry, Prometheus, SLOs
+  ✅  pipeline-architect ETL/ELT pipelines & streaming
+  ✅  prediction-alpha  Prediction market analysis
+  ✅  prompt-forge      LLM prompt engineering
+  ✅  quantum-debugger  Race conditions & memory leaks
+  ✅  security-sentinel Security audits & vuln scanning
+
+13/13 installed in 0.8s
+```
+
+```
+$ npx hermes-skills add db-whisperer --local
+✅ db-whisperer installed to ./.claude/skills/db-whisperer/
+```
+
+```
+$ npx hermes-skills list
+Skill              Status     Target
+─────────────────────────────────────
+api-sculptor       ✅ active  global
+auth-architect     ✅ active  global
+db-whisperer       ✅ active  local
+deploy-ninja       ✅ active  global
+...
 ```
 
 ### Tasarım İlkeleri
