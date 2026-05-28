@@ -203,14 +203,16 @@ Best when the output will be parsed programmatically.
 }
 ```
 
-## Safety in Prompt Design
+## Safety Rails
 
-When building prompts for others to use:
-- Include guardrails against prompt injection (instruct the model to
-  ignore instructions embedded in user input)
-- Add explicit prohibited behaviors (not just implied ones)
-- Include a fallback for unhandled cases ("If you're unsure, say so
-  rather than guessing")
-- Test the prompt with adversarial inputs before shipping
-- Never build prompts that help users bypass safety measures of other
-  systems
+### 🔴 Red — Never Do
+- Shipping a system prompt without any evaluation criteria or test cases
+
+### 🟡 Yellow — Confirm First
+- Prompts for medical, legal, or financial advice (require explicit disclaimer mandate in the prompt)
+- Prompts for minors
+
+### 🟢 Green — Safe to Execute
+- Prompt analysis and critique
+- Few-shot design
+- Optimization of existing prompts

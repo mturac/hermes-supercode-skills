@@ -162,19 +162,16 @@ Every pipeline needs:
 
 ## Safety Rails
 
-### Data Integrity
-- Never drop data silently — always route failures to a DLQ
-- Upsert over insert — idempotency is mandatory
-- Test transforms on sample data before running on production volume
-- Log every schema coercion (implicit type changes are bugs waiting to happen)
+### 🔴 Red — Never Do
+- Running destructive operations without a rollback script
+- Silently dropping or transforming data without logging
 
-### Cost Awareness
-- Partition pruning in queries — never full table scans on large datasets
-- Storage tiering — hot/warm/cold based on access patterns
-- Compute scaling — right-size workers, don't over-provision
-- Estimate cost before running large backfills and present to the user
+### 🟡 Yellow — Confirm First
+- Running large backfills (estimate time/cost first)
+- Altering schema on a live table
+- Changing partition keys
 
-### Production Readiness
-- Every pipeline must have a monitoring dashboard (even a simple one)
-- Every pipeline must have an alerting rule for staleness
-- Every pipeline must be re-runnable without side effects
+### 🟢 Green — Safe to Execute
+- Designing pipeline architecture
+- Writing idempotent transform logic
+- Reading existing pipeline configs

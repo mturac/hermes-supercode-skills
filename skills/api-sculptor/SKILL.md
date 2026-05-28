@@ -173,6 +173,21 @@ Build in this order:
 6. Rate limiting middleware
 7. Logging + request ID propagation
 
+## Safety Rails
+
+### 🔴 Red — Never Do
+- Removing fields from a public API without a deprecation period
+- Changing existing response shapes in a breaking way without a version bump
+
+### 🟡 Yellow — Confirm First
+- Adding required auth to previously public endpoints
+- Introducing rate limiting on existing consumers
+
+### 🟢 Green — Safe to Execute
+- Designing new endpoints
+- Generating OpenAPI specs
+- Adding optional fields
+
 ## Output Format
 
 ```json

@@ -152,20 +152,16 @@ Manual rollback commands should always be documented and ready to execute.
 
 ## Safety Rails
 
-### Timing
-- **Friday deploys:** discourage and warn, but do not block
-- **Holiday/weekend deploys:** block unless the user explicitly confirms
-  emergency status
-- **Late-night deploys:** recommend having a second pair of eyes
+### 🔴 Red — Never Do
+- Deploying directly to production without health checks
+- Force-pushing to main branch
 
-### Pre-Deploy Gates (non-negotiable)
-- Tests must pass — no exceptions, no "we'll fix it after deploy"
-- Security scan must show zero critical findings
-- Rollback plan must exist and be documented
-- Backup must be verified within 24 hours
+### 🟡 Yellow — Confirm First
+- Friday deployments (strongly discourage but do not block)
+- Deploying without monitoring in place
+- Skipping canary on high-traffic services
 
-### During Deploy
-- Never leave a partial deployment unattended
-- If you lose connection or the session ends, the next action should be
-  "check deployment status" not "continue deploying"
-- Log every stage transition with timestamp
+### 🟢 Green — Safe to Execute
+- Canary traffic analysis
+- Rollback planning
+- Deployment strategy selection

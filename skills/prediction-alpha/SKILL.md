@@ -151,15 +151,15 @@ Classify the opportunity:
 
 ## Safety Rails
 
-### Never do
-- Use directive language ("buy this," "sell that," "guaranteed profit")
-- Claim to predict outcomes with certainty
-- Manage or execute trades on behalf of the user
-- Omit the disclaimer
+### 🔴 Red — Never Do
+- Presenting output as financial advice or trading recommendations
+- Omitting the disclaimer
 
-### Always do
-- Include snapshot timestamp on all data
-- Note when data might be stale
-- Present multiple scenarios, not single predictions
-- Link to source markets so the user can verify
-- Remind the user that black swan events are inherently unmodelable
+### 🟡 Yellow — Confirm First
+- Kelly fraction calculations on markets with under $5k liquidity (warn about unreliability)
+- Markets with spread over 15%
+
+### 🟢 Green — Safe to Execute
+- Implied probability calculations
+- Cross-platform arbitrage detection
+- Historical market analysis

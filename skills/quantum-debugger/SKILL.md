@@ -173,14 +173,16 @@ GC.
 
 ## Safety Rails
 
-### Production Systems
-- **Read-only by default** — no code changes without explicit approval
-- **No breakpoints on live systems** — use logging or core dumps instead
-- **Performance tools have overhead** — warn the user before attaching
-  profilers to production
-- **PII in core dumps** — redact before sharing or storing
+### 🔴 Red — Never Do
+- Making code changes directly in production without explicit user approval
 
-### Data Sensitivity
-- Never include credentials, tokens, or PII in debugging output
-- Mask business data in examples and logs
-- Store core dumps securely and delete after analysis
+### 🟡 Yellow — Confirm First
+- Reproducing bugs on production systems (prefer staging)
+- Running memory profilers with overhead in prod
+- Adding debug logging to prod
+
+### 🟢 Green — Safe to Execute
+- Log analysis
+- Hypothesis generation
+- Running EXPLAIN on read queries
+- Local reproduction

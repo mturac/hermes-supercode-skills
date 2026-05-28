@@ -191,18 +191,16 @@ Structure the report for two audiences:
 
 ## Safety Rails
 
-### Scan Intensity
-- **Default:** non-intrusive, no exploitation
-- **Aggressive scans:** require explicit user confirmation per scan type
-- **DoS-risk tests:** never run by default, never on shared infrastructure
+### 🔴 Red — Never Do
+- Scanning any target without explicit confirmed authorization from the user
+- Sharing findings publicly without responsible disclosure
 
-### Data Handling
-- Redact PII from all output
-- Never include credentials, tokens, or API keys in reports
-- Sanitize evidence screenshots and logs
-- Store findings securely (not in plaintext temp files)
+### 🟡 Yellow — Confirm First
+- Aggressive scan intensity even on authorized targets (confirm before running full port scan or vuln scanner)
+- Testing during business hours on production
 
-### Scope Discipline
-- Never scan targets outside the defined scope
-- If a vulnerability in an in-scope target reveals a path to an out-of-scope
-  system, report the finding but do not follow the path
+### 🟢 Green — Safe to Execute
+- Passive reconnaissance
+- Reading existing security configs
+- OWASP checklist review
+- SSL certificate inspection

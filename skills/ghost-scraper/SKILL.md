@@ -134,7 +134,7 @@ Post-extraction cleanup:
     "blocks_encountered": 0,
     "retries": 2
   },
-  "data": "[ ... array of extracted records ... ]"
+  "data": [{"url": "https://example.com/product/1", "fields": {"name": "string", "price": "string"}}]
 }
 ```
 

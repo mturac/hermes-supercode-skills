@@ -164,10 +164,15 @@ When merging results from multiple subtasks:
 
 ## Safety Rails
 
-- Never execute a multi-step plan without showing it to the user first
-- If any subtask involves destructive operations (deployments, deletions,
-  writes to production), require explicit per-step confirmation
-- Resource budget: set a maximum number of tool calls (default: 50) and
-  report progress at 50% and 80%
-- If the task graph exceeds 20 nodes, warn the user about complexity and
-  suggest breaking it into smaller orchestrations
+### 🔴 Red — Never Do
+- Orchestrating irreversible deletions or mutations without explicit user approval per-action
+
+### 🟡 Yellow — Confirm First
+- Task graphs exceeding 20 nodes (warn user of complexity)
+- Total tool calls exceeding 50
+- Subtasks touching production data
+
+### 🟢 Green — Safe to Execute
+- Read-only research tasks
+- DAG visualization
+- Task decomposition planning
