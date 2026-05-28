@@ -1,0 +1,24 @@
+{
+  "name": "Hermes SuperCode Skills",
+  "description": "13 production-grade Claude Code skills: db-whisperer, auth-architect, obs-guardian, deploy-ninja, quantum-debugger, security-sentinel, api-sculptor, pipeline-architect, ghost-scraper, mcp-conductor, prediction-alpha, prompt-forge, infra-automation. Each follows Recon→Plan→Execute→Verify with red/yellow/green safety rails.",
+  "version": "1.0.0",
+  "author": "mturac",
+  "homepage": "https://github.com/mturac/hermes-supercode-skills",
+  "license": "MIT",
+  "keywords": ["skills", "production", "database", "auth", "observability", "security", "deployment", "api", "debugging"],
+  "plugins": [
+    { "name": "api-sculptor",      "type": "skill", "path": "skills/api-sculptor",      "description": "REST/GraphQL/gRPC design, OpenAPI specs" },
+    { "name": "auth-architect",    "type": "skill", "path": "skills/auth-architect",    "description": "OAuth2/OIDC, JWT, RBAC, SSO, MFA design" },
+    { "name": "db-whisperer",      "type": "skill", "path": "skills/db-whisperer",      "description": "Query optimization, indexing, schema migrations" },
+    { "name": "deploy-ninja",      "type": "skill", "path": "skills/deploy-ninja",      "description": "Zero-downtime deployments, canary, blue-green, rollback" },
+    { "name": "ghost-scraper",     "type": "skill", "path": "skills/ghost-scraper",     "description": "Ethical web scraping with anti-detection awareness" },
+    { "name": "infra-automation",  "type": "skill", "path": "skills/infra-automation",  "description": "DNS, SSL, Cloudflare Workers, CDN config" },
+    { "name": "mcp-conductor",     "type": "skill", "path": "skills/mcp-conductor",     "description": "Multi-agent task decomposition and orchestration" },
+    { "name": "obs-guardian",      "type": "skill", "path": "skills/obs-guardian",      "description": "OpenTelemetry, structured logging, Prometheus/Grafana, SLOs" },
+    { "name": "pipeline-architect","type": "skill", "path": "skills/pipeline-architect","description": "ETL/ELT pipelines, streaming, data warehouse design" },
+    { "name": "prediction-alpha",  "type": "skill", "path": "skills/prediction-alpha",  "description": "Prediction market analysis, odds, arbitrage detection" },
+    { "name": "prompt-forge",      "type": "skill", "path": "skills/prompt-forge",      "description": "System prompt engineering, few-shot design, evaluation" },
+    { "name": "quantum-debugger",  "type": "skill", "path": "skills/quantum-debugger",  "description": "Race conditions, memory leaks, performance profiling" },
+    { "name": "security-sentinel", "type": "skill", "path": "skills/security-sentinel", "description": "Security audits, vulnerability scanning, SSL hardening" }
+  ]
+}
