@@ -1,0 +1,23 @@
+[
+  {"query": "I need to add an A record for api.staging.myapp.io pointing to 52.1.2.3, and while you're at it check if the SSL cert is about to expire", "should_trigger": "infra-automation", "notes": "DNS + SSL combo task"},
+  {"query": "What are the current odds on the presidential election on Polymarket? Any arbitrage with Manifold?", "should_trigger": "prediction-alpha", "notes": "Cross-platform prediction market analysis"},
+  {"query": "I need to scrape product prices from this e-commerce site but it's a React SPA with Cloudflare protection", "should_trigger": "ghost-scraper", "notes": "JS-rendered site with anti-bot"},
+  {"query": "I need you to scrape 5 competitor sites, compare their pricing, merge the data, and generate a CSV report", "should_trigger": "mcp-conductor", "notes": "Multi-step task spanning scraping + data + reporting"},
+  {"query": "We have Shopify webhook events in Kafka and need them in BigQuery with hourly aggregates for the analytics team", "should_trigger": "pipeline-architect", "notes": "Streaming ETL with specific tech stack"},
+  {"query": "Run a security audit on our staging environment at staging.mycompany.com, I own the domain", "should_trigger": "security-sentinel", "notes": "Authorized security assessment"},
+  {"query": "Deploy the new version to production using canary, start at 5%, auto-rollback if error rate doubles", "should_trigger": "deploy-ninja", "notes": "Canary deployment with rollback criteria"},
+  {"query": "Our API server crashes randomly under load, maybe once every 500 requests, and I can't reproduce it locally", "should_trigger": "quantum-debugger", "notes": "Intermittent production crash"},
+  {"query": "Design a REST API for our marketplace — users, products, orders, reviews — with OpenAPI spec", "should_trigger": "api-sculptor", "notes": "Full API design request"},
+  {"query": "This customer support prompt keeps hallucinating product features that don't exist, can you fix it?", "should_trigger": "prompt-forge", "notes": "Prompt optimization with specific failure mode"},
+
+  {"query": "What's the weather in Istanbul tomorrow?", "should_trigger": false, "notes": "General question, no skill needed"},
+  {"query": "Write me a Python function to sort a list", "should_trigger": false, "notes": "Simple coding task, no specialized skill"},
+  {"query": "Summarize this PDF for me", "should_trigger": false, "notes": "File reading task, not a specialized domain"},
+  {"query": "Help me write a cover letter for a product manager role", "should_trigger": false, "notes": "Writing task, no infrastructure/data/security domain"},
+  {"query": "What are the best practices for React state management?", "should_trigger": false, "notes": "General knowledge question"},
+  {"query": "I want to set up a DNS record for my blog", "should_trigger": "infra-automation", "notes": "Casual DNS request should still trigger"},
+  {"query": "Is there any edge on the Fed rate decision markets right now?", "should_trigger": "prediction-alpha", "notes": "Implicit prediction market question"},
+  {"query": "Can you pull the job listings from this careers page?", "should_trigger": "ghost-scraper", "notes": "Casual scraping request"},
+  {"query": "My Node.js service leaks memory slowly over 24 hours", "should_trigger": "quantum-debugger", "notes": "Memory leak debugging"},
+  {"query": "I need to move 50M rows from MySQL to Snowflake with daily incremental syncs", "should_trigger": "pipeline-architect", "notes": "Data migration at scale"}
+]
