@@ -1,0 +1,13 @@
+{
+  "name": "hermes-skills",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "13 production-grade Claude Code skills — install with npx hermes-skills",
+  "bin": { "hermes-skills": "./bin/hermes-skills.js" },
+  "engines": { "node": ">=18" },
+  "keywords": ["claude-code", "claude-skills", "ai-skills", "llm", "developer-tools"],
+  "author": "mturac",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/mturac/hermes-supercode-skills.git" },
+  "files": ["bin/", "lib/", "skills/", "README.md", "LICENSE"]
+}

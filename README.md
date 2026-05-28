@@ -34,17 +34,33 @@ Each skill follows the same discipline: **Recon → Plan → Execute → Verify*
 
 ### Installation
 
+#### Option A: npx (recommended)
+
+```bash
+# Install all 13 skills globally
+npx hermes-skills install
+
+# Or install a single skill
+npx hermes-skills add db-whisperer
+
+# Local install (current project only)
+npx hermes-skills add auth-architect --local
+
+# List, update, remove
+npx hermes-skills list
+npx hermes-skills update
+npx hermes-skills remove api-sculptor
+```
+
+#### Option B: Git clone + symlink
+
 ```bash
 git clone https://github.com/mturac/hermes-supercode-skills.git
 cd hermes-supercode-skills
 
-# Symlink all skills into Claude Code skills directory
 for skill in skills/*/; do
   ln -sf "$(pwd)/$skill" ~/.claude/skills/$(basename "$skill")
 done
-
-# Verify
-ls ~/.claude/skills/
 ```
 
 ### Demo
@@ -126,11 +142,20 @@ Hermes 是一套包含 **13 个专业技能**的 Claude Code 扩展包，覆盖�
 
 ### 安装
 
+#### 方式 A：npx（推荐）
+
+```bash
+npx hermes-skills install          # 安装全部 13 个技能
+npx hermes-skills add db-whisperer # 安装单个技能
+npx hermes-skills list             # 查看已安装技能
+npx hermes-skills update           # 更新至最新版本
+```
+
+#### 方式 B：Git 克隆
+
 ```bash
 git clone https://github.com/mturac/hermes-supercode-skills.git
 cd hermes-supercode-skills
-
-# 将所有技能软链接到 Claude Code 技能目录
 for skill in skills/*/; do
   ln -sf "$(pwd)/$skill" ~/.claude/skills/$(basename "$skill")
 done
@@ -215,17 +240,24 @@ Her skill aynı disiplini izler: **Keşif → Planlama → Uygulama → Doğrula
 
 ### Kurulum
 
+#### Seçenek A: npx (önerilen)
+
+```bash
+npx hermes-skills install             # Tüm 13 skill'i global kur
+npx hermes-skills add db-whisperer    # Tek skill kur
+npx hermes-skills add auth-architect --local  # Sadece bu proje için
+npx hermes-skills list                # Kurulu skill'leri göster
+npx hermes-skills update              # GitHub'dan güncelle
+```
+
+#### Seçenek B: Git clone
+
 ```bash
 git clone https://github.com/mturac/hermes-supercode-skills.git
 cd hermes-supercode-skills
-
-# Tüm skill'leri Claude Code skills dizinine sembolik bağla
 for skill in skills/*/; do
   ln -sf "$(pwd)/$skill" ~/.claude/skills/$(basename "$skill")
 done
-
-# Doğrula
-ls ~/.claude/skills/
 ```
 
 ### Demo
